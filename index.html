@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GlowZone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0014;
+      color: white;
+    }
+
+    header {
+      padding: 80px 20px;
+      background: radial-gradient(circle, #ff00ff, #0b0014);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #00ffff;
+      color: black;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .btn:hover {
+      background: #00e6e6;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .features div {
+      background: #16002a;
+      padding: 30px;
+      border-radius: 15px;
+      font-size: 1.1rem;
+      transition: transform 0.3s;
+    }
+
+    .features div:hover {
+      transform: translateY(-10px);
+      background: #1f003d;
+    }
+
+    .ages {
+      background: linear-gradient(135deg, #16002a, #0b0014);
+    }
+
+    .ages h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    #book {
+      background: #16002a;
+    }
+
+    #book h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .booking-form {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #0b0014;
+      padding: 30px;
+      border-radius: 15px;
+      border: 2px solid #ff00ff;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #00ffff;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      background: #16002a;
+      border: 1px solid #ff00ff;
+      color: white;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .form-group input::placeholder {
+      color: #888;
+    }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .price-card {
+      background: #16002a;
+      padding: 25px;
+      border-radius: 15px;
+      border: 2px solid #00ffff;
+    }
+
+    .price-card h3 {
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+
+    .price-card .price {
+      font-size: 2rem;
+      color: #ff00ff;
+      margin: 15px 0;
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, #16002a, #0b0014);
+    }
+
+    .contact-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      padding: 12px 25px;
+      background: #ff00ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .contact-links a:hover {
+      background: #e600e6;
+    }
+
+    footer {
+      padding: 30px 20px;
+      background: black;
+      font-size: 0.9rem;
+      border-top: 2px solid #ff00ff;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>✨ GlowZone ✨</h1>
+  <p>Glow. Paint. Play. Hang Out.</p>
+  <a class="btn" href="#book">Book Now</a>
+</header>
+
+<section class="features">
+  <div>🎨 Glow Paint Studio</div>
+  <div>🎳 Neon Bowling</div>
+  <div>🕹️ Arcade Games</div>
+  <div>🥤 Glow Bar & Lounge</div>
+</section>
+
+<section class="ages">
+  <h2>Ages 15–28</h2>
+  <p>Different vibes at different times. Safe. Supervised. Fun.</p>
+  <p style="margin-top: 20px; font-size: 1.1rem;">Experience the ultimate neon entertainment destination!</p>
+</section>
+
+<section style="background: #0b0014;">
+  <h2 style="font-size: 2rem; margin-bottom: 30px;">Our Pricing</h2>
+  <div class="pricing">
+    <div class="price-card">
+      <h3>🎨 Paint Studio</h3>
+      <p>Glow Paint Experience</p>
+      <div class="price">$25/hr</div>
+      <p>Includes: Canvas, Paints & Lights</p>
+    </div>
+    <div class="price-card">
+      <h3>🎳 Neon Bowling</h3>
+      <p>Glow Bowling Session</p>
+      <div class="price">$30/hr</div>
+      <p>Includes: Shoes & Glow Effects</p>
+    </div>
+    <div class="price-card">
+      <h3>🕹️ Arcade Games</h3>
+      <p>Unlimited Game Access</p>
+      <div class="price">$20/hr</div>
+      <p>Includes: Token Package</p>
+    </div>
+    <div class="price-card">
+      <h3>🥤 Glow Bar</h3>
+      <p>Food & Beverages</p>
+      <div class="price">$5-$15</div>
+      <p>Glow Drinks & Snacks</p>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <h2>📅 Book Your Session</h2>
+  <div class="booking-form">
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" required placeholder="(555) 000-0000">
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date *</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="time">Time *</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+
+      <div class="form-group">
+        <label for="activity">Select Activity *</label>
+        <select id="activity" name="activity" required>
+          <option value="">Choose an activity...</option>
+          <option value="paint">Glow Paint Studio</option>
+          <option value="bowling">Neon Bowling</option>
+          <option value="arcade">Arcade Games</option>
+          <option value="combo">Combo Package (All Activities)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="guests">Number of Guests *</label>
+        <select id="guests" name="guests" required>
+          <option value="">Select number of guests...</option>
+          <option value="1">1 Guest</option>
+          <option value="2">2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4 Guests</option>
+          <option value="5">5+ Guests</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn">Confirm Booking</button>
+    </form>
+  </div>
+</section>
+
+<section class="contact-section">
+  <h2>📞 Contact Us</h2>
+  <p style="margin-bottom: 30px; font-size: 1.1rem;">Have questions? Get in touch with our team!</p>
+  <div class="contact-links">
+    <a href="mailto:hello@glowzone.com">📧 Email Us</a>
+    <a href="tel:+1234567890">☎️ Call Us</a>
+    <a href="#">💬 Live Chat</a>
+  </div>
+  <p style="margin-top: 30px; color: #00ffff;">📍 123 Neon Street, Downtown City | Open 3PM - 11PM Daily</p>
+</section>
+
+<footer>
+  <p>© 2026 GlowZone - Where Neon Meets Fun! | All Rights Reserved</p>
+  <p style="margin-top: 10px; color: #00ffff;">Safe • Supervised • Unforgettable</p>
+</footer>
+
+</body>
+</html>
